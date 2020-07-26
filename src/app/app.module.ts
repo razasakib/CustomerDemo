@@ -9,6 +9,7 @@ import { CustomerComponent } from './component/customer/customer.component';
 import { CustomerListComponent } from './component/customer-list/customer-list.component';
 import { HeaderComponent } from './component/header/header.component';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,8 @@ import { PageNotFoundComponent } from './component/page-not-found/page-not-found
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    
     MatTableModule
   ],
   providers: [],
