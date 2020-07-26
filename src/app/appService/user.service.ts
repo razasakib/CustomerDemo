@@ -20,11 +20,11 @@ export class UserService {
   
 
   tableData:Customer[]= [
-    { id: 1, name: "saukat", address: "bbsr", mobile: "8984578469" },
-    { id: 2, name: "mahee", address: "sagardi", mobile: "8986845786" },
-    { id: 3, name: "saukat", address: "bbsr", mobile: "8984578469" },
-    { id: 4, name: "mahee", address: "sagardi", mobile: "8986845786" },
-    { id: 5, name: "saukat", address: "bbsr", mobile: "8984578469" },
+    { id: 1, name: "Saukat", address: "bbsr", mobile: "8984578469" },
+    { id: 2, name: "Mahee", address: "sagardi", mobile: "7826548759" },
+    { id: 3, name: "Animesh", address: "puri", mobile: "9114857485" },
+    { id: 4, name: "Ajit", address: "ctc", mobile: "9864784558" },
+    { id: 5, name: "santosh", address: "bbsr", mobile: "8984578469" },
   ];
 
   //getuserData

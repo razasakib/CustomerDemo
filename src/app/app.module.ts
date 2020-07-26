@@ -10,6 +10,10 @@ import { CustomerListComponent } from './component/customer-list/customer-list.c
 import { HeaderComponent } from './component/header/header.component';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -24,8 +28,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    
-    MatTableModule
+    MatSortModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
