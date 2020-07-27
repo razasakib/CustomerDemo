@@ -7,8 +7,7 @@ import { LeadsListComponent } from './component/leads-list/leads-list.component'
 
 
 const routes: Routes = [
-  {path:'',redirectTo:'customer',pathMatch:'full'},
-  { path: 'customer', component:CustomerComponent},
+  {path:'',redirectTo:'customerList',pathMatch:'full'},
   { path: 'customerList', component:CustomerListComponent },
   {path:'leads',component:LeadsListComponent},
   { path: '**', component:PageNotFoundComponent }

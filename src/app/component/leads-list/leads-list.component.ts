@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-leads-list',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeadsListComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
+   
+   }
+/*
+  ngOnChanges(changes: SimpleChanges): void {
+    window.location.reload();;
   }
-
+*/
+  ngOnInit(): void {
+   
+  }
+ 
 }

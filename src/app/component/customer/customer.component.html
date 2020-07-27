@@ -10,7 +10,7 @@
             <div class="card-header">Customer Information</div>
             <div class="card-body" formArrayName="contacts">
               <div class="row">
-                <div class="col-6" *ngFor="let contact of contactFormGroup.controls; let i = index;">
+                <div class="col-6" *ngFor="let contact of customerFormGroup.controls; let i = index;">
                   <div [formGroupName]="i" class="row">
                     
                     <div class="form-group col-6">

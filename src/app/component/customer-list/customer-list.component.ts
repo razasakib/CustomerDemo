@@ -4,7 +4,7 @@ import { Customer } from '../customer/customer.model';
 import { MatTableDataSource } from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator'
 import { MatSort } from '@angular/material/sort';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {MatDialog} from '@angular/material/dialog';
 import { CustomerComponent } from '../customer/customer.component';
 
 @Component({
@@ -22,7 +22,7 @@ export class CustomerListComponent implements OnInit {
   constructor(private userService:UserService,private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.dataSource.paginator = this.paginator;
+    
     this.dataSource.sort = this.sort;
     this.getCustmomerData();
   }

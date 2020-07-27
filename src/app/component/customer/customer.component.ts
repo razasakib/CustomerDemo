@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormArray, FormBuilder, Validators } from '@angular/forms';
 import { UserService } from 'src/app/appService/user.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-customer',
@@ -13,22 +14,25 @@ export class CustomerComponent implements OnInit {
   customerAllData:any=[];
 
   public form: FormGroup;
-  public contactList: FormArray;
+ // public contactList: FormArray;
+  public customerList: FormArray;
 
-  // returns all form groups under contacts
-  get contactFormGroup() {
+  // returns all form groups under customer
+  get customerFormGroup() {
     return this.form.get('contacts') as FormArray;
   }
 
-  constructor(private fb: FormBuilder,private userService:UserService,private router:Router) {}
+
+  constructor(private fb: FormBuilder,private dialog: MatDialog,private userService:UserService,private router:Router) {}
 
   ngOnInit() {
+
     this.form = this.fb.group({
       contacts: this.fb.array([this.createContact()])
     });
 
-    // set contactlist to this field
-    this.contactList = this.form.get('contacts') as FormArray;
+    // set customerList to this field
+    this.customerList = this.form.get('contacts') as FormArray;
     
     this.userService.dataObservable.subscribe({
       next : (users)=>{
@@ -49,25 +53,29 @@ export class CustomerComponent implements OnInit {
 
   // add a contact form group
   addContact() {
-    this.contactList.push(this.createContact());
+    this.customerList.push(this.createContact());
   }
 
-  // remove contact from group
+  // remove customer from group
   removeContact(index) {
-    // this.contactList = this.form.get('contacts') as FormArray;
-    this.contactList.removeAt(index);
+    // this.customerList = this.form.get('contacts') as FormArray;
+    this.customerList.removeAt(index);
   }
 
   
   // method triggered when form is submitted
   submit() {
-
+     
     console.log(this.form.value);
+    debugger;
     let customers : [] = this.form.value.contacts
     customers.forEach(e=>{
       this.userService.pushCustomer(e)
     })  
-    this.router.navigate(['customerList']);
+    this.dialog.closeAll();
+    this.form.reset();
+
+    this.router.navigate(['leads']);
   }
 
 
