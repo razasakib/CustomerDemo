@@ -1,8 +1,14 @@
+
 <div></div>
-<mat-form-field>
+<div class="row">
+  <div class="example-button-row">
+    <button (click)="onCreate()" class="btn btn-light"><b>+</b>Create</button>
+  </div>
+<mat-form-field id="filter">
   <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search.....">
 </mat-form-field>
+</div>
 <div class="mat-elevation-z8">
 
   <div>

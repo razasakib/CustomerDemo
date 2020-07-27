@@ -14,6 +14,10 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
+import { LeadsListComponent } from './component/leads-list/leads-list.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
+
 
 @NgModule({
   declarations: [
@@ -21,7 +25,9 @@ import { MatInputModule } from '@angular/material/input';
     CustomerComponent,
     CustomerListComponent,
     HeaderComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    
+    LeadsListComponent
   ],
   imports: [
     BrowserModule,
@@ -31,9 +37,11 @@ import { MatInputModule } from '@angular/material/input';
     MatSortModule,
     MatTableModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[CustomerComponent]
 })
 export class AppModule { }
